@@ -1,0 +1,147 @@
+#testimonials {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    position: relative;
+
+    bottom: 300px;
+}
+
+#testimonial_chef {
+
+    width: 400px;
+
+    height: auto;
+
+}
+
+#testimonials .section-subtitle {
+
+    font-size: 2.25rem;
+
+    
+}
+
+.testimonials_content {
+
+    width: 50%;
+    margin-bottom: 90px;
+
+}
+
+#feedbacks {
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.btn-default-testimonial {
+
+    margin-top: 30px;
+
+    height: 50px;
+
+    width: 180px;
+
+    border-radius: 12px;
+
+    border: none;
+
+    background-color: yellow;
+
+    font-weight: 600;
+
+}
+
+
+.btn-default-testimonial:hover {
+    background-color: rgba(252, 249, 78, 0.993);
+
+}
+
+.feedback-content {
+
+    gap: 310px;
+
+}
+
+.estrelas_user {
+    color: rgb(247, 247, 55);
+    padding-left: 250px;
+}
+
+.feedback {
+    gap: 30px;
+    background-color: #fff;
+    width: 630px;
+    height: 200px;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+
+}
+
+.feedback img {
+
+    width: 90px;
+
+    height: 90px;
+}
+
+@media screen and (max-width: 1170px){
+
+    .section-title{
+
+        position: relative;
+        right: 1%;
+    }
+
+    .section-subtitle{
+
+        position: relative;
+        left: 4%;
+        width: 400px;
+    }
+
+    #section-subtitle-testimonial {
+        position: relative;
+        right: 40%;
+        width: 400px;
+        font-size: 22px;
+    }
+
+    .testimonials {
+        flex-direction: column;
+    }
+
+    #testimonial_chef{
+        display:none;
+
+    }
+
+    .feedback{
+
+        position: relative;
+        right: 67%;
+        width: 450px;
+        height: 130px;
+        margin-left: 12pxs;
+    }
+
+    .estrelas_user {
+        color: rgb(247, 247, 55);
+        padding-left: 80px;
+    }
+
+    .lorem_user {
+
+        font-size: 9px;
+    }
+    
+}
+
+

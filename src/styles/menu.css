@@ -1,0 +1,180 @@
+#menu_pratos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    margin-bottom: 1000px;
+}
+
+.dishes{
+
+    width: 100%;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+    display: flex;
+
+}
+
+.dish-title {
+
+    padding-top: 22px;
+
+    padding-left: 70px;
+}
+
+.dish-description{
+    padding-left: 20px;
+
+    padding-top: 17px;
+
+
+}
+
+.dish-rate {
+
+    padding-left: 50px;
+
+    padding-top: 20px;
+
+
+
+    color: #e9a209;
+}
+
+.dish-price {
+
+    padding-top: 20px;
+
+
+    padding-left: 12px;
+    display: flex;
+
+    
+}
+
+
+.dish-price .btn-default_shop {
+
+    margin-left: 30%;
+
+    height: 45px;
+
+    width: 45px;
+
+    border-radius: 14px;
+
+    border: none;
+
+    background-color: #e9a209;
+}
+
+
+.img-dish{
+
+    height: 280px;
+    width: 280px;
+}
+
+
+.caixa_fundo_prato {
+
+    background-color: rgb(218, 211, 211);
+
+    width: 280px;
+
+    height: 280px;
+
+    border-bottom-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    
+    border-top-right-radius: 15px;
+
+}
+
+.caixa_fundo_prato img{
+
+
+    width: 240px;
+
+    height: 240px;
+
+    justify-content: center;
+
+    margin-left: 22px;
+
+    margin-top: 25px;
+
+    border-radius: 12px;
+
+}
+
+.dish-heart {
+    color: #fff;
+
+    background-color: #e9a209;
+
+    width: 58px;
+
+    height: 50px;
+
+    border-top-left-radius: 12px;
+
+    border-top-right-radius: 12px;
+}
+
+.dish-heart i{
+
+    margin-left: 20px;
+
+    height: 30px;
+
+    width: 50px;
+
+    margin-top: 20px;
+}
+
+.dish-heart:hover {
+    color: #e60e0e;
+
+}
+
+.preco_prato {
+
+    padding-left: 50px;
+
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 1170px){
+
+    .dishes {
+
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section-title {
+
+        padding-bottom: 20px;
+    }
+
+    .section-subtitle {
+
+        font-size: 1.80rem;
+
+        padding-left: 60px;
+    }
+
+
+    .social_media_buttons {
+
+        margin-left: 60px;
+    }
+
+
+}

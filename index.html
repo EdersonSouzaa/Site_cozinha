@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./src/styles/styles.css">
+    <link rel="stylesheet" href="./src/styles/menu.css">
+    <link rel="stylesheet" href="./src/styles/header.css">
+    <link rel="stylesheet" href="./src/styles/footer.css">
+    <link rel="stylesheet" href="./src/styles/home.css">
+    <link rel="stylesheet" href="./src/styles/testimonials.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+    <title>Pagina cooking</title>
+</head>
+
+<body>
+
+    <header>
+
+        <nav id="navbar">
+            <i class="fa-solid fa-carrot" id="nav_logo"> FOOD HEALTH</i>
+
+
+            <ul id="nav_list">
+
+                <li class="nav_item active">
+
+                    <a href="#home">Inicio</a>
+                </li>
+
+                <li class="nav_item">
+
+                    <a href="#menu">Cardápio</a>
+                </li>
+
+                <li class="nav_item">
+
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+
+            </ul>
+
+
+            <button class="btn-default">Peça Aqui</button>
+
+
+            <!--Parte mobile -->
+
+            <!--Barra de menu lateral para a tela mobile-->
+            <button id="mobile_btn_lateral">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+        </nav>
+
+        <div id="mobile_navegacao">
+
+            <ul id="mobile_nav_list">
+
+                <li class="nav_item">
+
+                    <a href="#home">Inicio</a>
+                </li>
+
+                <li class="nav_item">
+
+                    <a href="#menu">Cardápio</a>
+                </li>
+
+                <li class="nav_item">
+
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+
+            </ul>
+
+            <button class="btn-default">Peça Aqui</button>
+
+
+        </div>
+
+
+    </header>
+
+
+    <main id="content">
+
+        <section id="home">
+
+            <div id="cta">
+
+                <h1 class="title">
+
+                    A qualidade que <span>você</span> merece
+
+                </h1>
+
+
+                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias illo ex
+                    enim soluta obcaecati itaque neque odio accusantium minima totam, iure facilis accusamus
+                    temporibus. Quas impedit commodi necessitatibus cum rerum.
+                </p>
+
+                <div id="cta_buttons">
+
+                    <a href="#" class="btn-default">Ver cardápio</a>
+
+                    <a href="tel:+99999999" id="phone_button">
+
+                        <button class="btn-default">
+                            <i class="fa solid fa-phone">
+
+                                (82) 99999-9999
+                            </i>
+                        </button>
+                    </a>
+
+                </div>
+
+                <button id="telefone"></button>
+
+            </div>
+
+            <div class="social_media_buttons">
+
+                <a href="">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+
+            <div id="banner">
+
+                <img src="./Imagens/hero.png" alt="hero">
+
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <div id="menu_pratos">
+
+        <h2 class="section-title">Cardápio</h2>
+
+        <h3 class="section-subtitle">Nossos pratos especiais</h3>
+
+        <div class="dishes">
+
+            <div class="dish">
+
+                <div class="dish-heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <!--Container caixa para o prato-->
+
+                <div class="caixa_fundo_prato">
+
+                    <img src="./Imagens/prato4.jpeg" alt="prato 4">
+
+                </div>
+                <!-------------------------------->
+
+                <h3 class="dish-title">Lorem ipsum</h3>
+
+                <p class="dish-description">Lorem ipsum, dolor si
+                    iquid.</p>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span>(500+)</span>
+
+                </div>
+
+                <div class="dish-price">
+                    <h4 class="preco_prato">R$20,00</h4>
+                    <button class="btn-default_shop">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="dish">
+
+                <div class="dish-heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <!--Container caixa para o prato-->
+
+                <div class="caixa_fundo_prato">
+
+                    <img src="./Imagens/prato5.jpeg" alt="prato 5">
+
+                </div>
+                <!-------------------------------->
+
+                <h3 class="dish-title">Lorem ipsum</h3>
+
+                <p class="dish-description">Lorem ipsum, dolor si
+                    iquid.</p>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span>(500+)</span>
+
+                </div>
+
+                <div class="dish-price">
+                    <h4 class="preco_prato">R$20,00</h4>
+                    <button class="btn-default_shop">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="dish">
+
+                <div class="dish-heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <!--Container caixa para o prato-->
+
+                <div class="caixa_fundo_prato">
+
+                    <img src="./Imagens/prato6.jpeg" alt="prato 6">
+
+                </div>
+                <!-------------------------------->
+
+                <h3 class="dish-title">Lorem ipsum</h3>
+
+                <p class="dish-description">Lorem ipsum, dolor si
+                    iquid.</p>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span>(500+)</span>
+
+                </div>
+
+                <div class="dish-price">
+                    <h4 class="preco_prato">R$20,00</h4>
+                    <button class="btn-default_shop">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="dish">
+
+                <div class="dish-heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <!--Container caixa para o prato-->
+
+                <div class="caixa_fundo_prato">
+
+                    <img src="./Imagens/prato7.jpeg" alt="prato 7">
+
+                </div>
+                <!-------------------------------->
+
+                <h3 class="dish-title">Lorem ipsum</h3>
+
+                <p class="dish-description">Lorem ipsum, dolor si
+                    iquid.</p>
+
+                <div class="dish-rate">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span>(500+)</span>
+
+                </div>
+
+                <div class="dish-price">
+                    <h4 class="preco_prato">R$20,00</h4>
+                    <button class="btn-default_shop">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+    <section id="testimonials">
+
+        
+        <img src="./Imagens/chef.png" id="testimonial_chef" alt="chefe">
+        <div class="testimonials_content">
+
+            <h2 class="section-title">
+                Depoimentos
+            </h2>
+
+            <h3 id="section-subtitle-testimonial">
+                O que os clientes falam sobre nós
+            </h3>
+
+            <div id="feedbacks">
+
+                <div class="feedback">
+                    <img src="./Imagens/avatar.png" alt="feedback-avatar">
+
+                    <div class="feedback-content">
+                        <p>
+                            Maria da Silva
+                            <span class="estrelas_user">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </p>
+
+                        <p class="lorem_user">
+                            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo unde alias quaerat assumenda,
+                            eos enim itaque error officia optio perspiciatis soluta omnis nam, dicta voluptatibus eius
+                            praesentium et qui quidem!"
+                        </p>
+                    </div>
+
+                    
+                </div>
+
+                <div class="feedback">
+                    <img src="./Imagens/avatar.png" alt="feedback-avatar">
+
+                    <div class="feedback-content">
+                        <p>
+                            Maria da Silva
+                            <span class="estrelas_user">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </p>
+
+                        <p class="lorem_user">
+                            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo unde alias quaerat assumenda,
+                            eos enim itaque error officia optio perspiciatis soluta omnis nam, dicta voluptatibus eius
+                            praesentium et qui quidem!"
+                        </p>
+                    </div>
+
+                    
+                    
+                </div>
+                <button class="btn-default-testimonial">Ver mais Avaliações</button>
+    </section>
+
+
+    <footer>
+
+        <img src="./Imagens/waves_site_test.png" alt="onda site">
+
+        <div id="footer_items">
+
+            <span id="copyright">
+
+                &copy 2025 Ederson facanha
+            </span>
+
+            <div class="social_media_buttons">
+
+                <a href="">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+    
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+    
+                <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+        
+     
+    </footer>
+
+
+    <script src="src/javascript/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+#menu_pratos {
+
+    position: relative;
+
+    top: 40px;
+}
+
+#cta {
+
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+}
+
+#cta .title {
+
+    font-size: 4rem;
+    color: #1d1d1d;
+}
+
+#content{
+
+    
+    display: flex;
+
+    min-height: 1px;
+    min-height: auto;
+
+}
+
+
+
+#cta .title span{
+
+    color: #e9a209;
+}
+
+#cta_buttons {
+    display: flex;
+
+    gap: 30px;
+}
+
+#cta_buttons a{
+    text-decoration: none;
+
+    gap: 30px;
+}
+
+#phone_button {
+
+    display: flex;
+    align-items: center;
+    background-color: #ffff;
+    padding: 8px 14px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+
+}
+
+
+@media screen and (max-width: 1170px) {
+
+    #home {
+      
+        padding-top: 0px;
+    }
+
+    #banner, 
+    #banner img, 
+    #home .shape {
+        
+        display:none;
+    }
+
+    #cta {
+
+        width: 100%;
+        align-items: center;
+    }
+}
