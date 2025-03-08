@@ -129,7 +129,8 @@
         right: 67%;
         width: 450px;
         height: 130px;
-        margin-left: 12pxs;
+        margin-left: 12px;
+        display: block;
     }
 
     .estrelas_user {
