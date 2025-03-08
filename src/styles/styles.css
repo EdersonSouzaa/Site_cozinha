@@ -14,6 +14,11 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 * {
     font-family: 'Poppins', sans-serif;
   
@@ -21,6 +26,7 @@ html {
     scrollbar-width: none;
 
     height: auto;
+    max-width: 100%;
 }
 
 body {
