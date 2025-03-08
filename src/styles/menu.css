@@ -178,5 +178,10 @@
         margin-left: 60px;
     }
 
+    #menu_pratos {
+        transition: none;
+        animation: none;
+    }
+
 
 }
