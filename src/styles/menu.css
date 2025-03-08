@@ -156,6 +156,8 @@
 
         flex-wrap: wrap;
         justify-content: center;
+        transition: none;
+        animation: none;
     }
 
     .section-title {
