@@ -1,434 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <title>Food Health</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/styles/styles.css">
-    <link rel="stylesheet" href="./src/styles/menu.css">
-    <link rel="stylesheet" href="./src/styles/header.css">
-    <link rel="stylesheet" href="./src/styles/footer.css">
-    <link rel="stylesheet" href="./src/styles/home.css">
-    <link rel="stylesheet" href="./src/styles/testimonials.css">
+    
+    <style>
+        /* Estilos rápidos para o Menu Mobile */
+        #mobile_menu_container {
+            display: none;
+            position: absolute;
+            top: 80px;
+            right: 20px;
+            background-color: #fff;
+            width: 250px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            z-index: 1000;
+        }
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
-        <script src="https://unpkg.com/scrollreveal"></script>
+        #mobile_menu_container.active {
+            display: block;
+            animation: slideIn 0.3s ease-out;
+        }
 
-    <title>Pagina cooking</title>
+        #mobile_nav_list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #mobile_nav_list .nav_item a {
+            text-decoration: none;
+            color: #1d1d1d;
+            font-weight: 600;
+            display: block;
+            padding: 10px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        #mobile_nav_list .nav_item a:hover {
+            background-color: #ffe8b4;
+            color: #e9a209;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-
 <body>
-
     <header>
-
-        <nav id="navbar">
-            <i class="fa-solid fa-carrot" id="nav_logo"> FOOD HEALTH</i>
-
-
+        <nav id="navbar" class="container">
+            <div id="nav_logo"><i class="fa-solid fa-carrot"></i> FOOD HEALTH</div>
             <ul id="nav_list">
-
-                <li class="nav_item active">
-
-                    <a href="#home">Inicio</a>
-                </li>
-
-                <li class="nav_item">
-
-                    <a href="#menu">Cardápio</a>
-                </li>
-
-                <li class="nav_item">
-
-                    <a href="#testimonials">Avaliações</a>
-                </li>
-
+                <li class="nav_item active"><a href="#home">Início</a></li>
+                <li class="nav_item"><a href="#menu_pratos">Cardápio</a></li>
+                <li class="nav_item"><a href="#testimonials">Avaliações</a></li>
             </ul>
+            <button class="btn-default hide-mobile">Peça Aqui</button>
+            
+            <button id="mobile_btn_lateral"><i class="fa-solid fa-bars"></i></button>
 
-
-            <button class="btn-default">Peça Aqui</button>
-
-
-            <!--Parte mobile -->
-
-            <!--Barra de menu lateral para a tela mobile-->
-            <button id="mobile_btn_lateral">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-
+            <div id="mobile_menu_container">
+                <ul id="mobile_nav_list">
+                    <li class="nav_item"><a href="#home">Início</a></li>
+                    <li class="nav_item"><a href="#menu_pratos">Cardápio</a></li>
+                    <li class="nav_item"><a href="#testimonials">Avaliações</a></li>
+                    <li><button class="btn-default" style="width: 100%;">Peça Aqui</button></li>
+                </ul>
+            </div>
         </nav>
-
-        <div id="mobile_navegacao">
-
-            <ul id="mobile_nav_list">
-
-                <li class="nav_item">
-
-                    <a href="#home">Inicio</a>
-                </li>
-
-                <li class="nav_item">
-
-                    <a href="#menu">Cardápio</a>
-                </li>
-
-                <li class="nav_item">
-
-                    <a href="#testimonials">Avaliações</a>
-                </li>
-
-            </ul>
-
-            <button class="btn-default">Peça Aqui</button>
-
-
-        </div>
-
-
     </header>
 
-
-    <main id="content">
-
-        <section id="home">
-
+    <main>
+        <section id="home" class="container">
             <div id="cta">
-
-                <h1 class="title">
-
-                    A qualidade que <span>você</span> merece
-
-                </h1>
-
-
-                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias illo ex
-                    enim soluta obcaecati itaque neque odio accusantium minima totam, iure facilis accusamus
-                    temporibus. Quas impedit commodi necessitatibus cum rerum.
-                </p>
-
+                <h1 class="title">A qualidade que <span>você</span> merece</h1>
+                <p class="description">Descubra sabores autênticos preparados com ingredientes selecionados para proporcionar uma experiência gastronômica inesquecível.</p>
                 <div id="cta_buttons">
-
-                    <a href="#" class="btn-default">Ver cardápio</a>
-
-                    <a href="tel:+99999999" id="phone_button">
-
-                        <button class="btn-default">
-                            <i class="fa solid fa-phone">
-
-                                (82) 99999-9999
-                            </i>
-                        </button>
+                    <a href="#menu_pratos" class="btn-default">Ver cardápio</a>
+                    <a href="tel:+5585999999999" id="phone_button">
+                        <i class="fa-solid fa-phone"></i> (00) 00000-0000
                     </a>
-
                 </div>
-
-                <button id="telefone"></button>
-
+                <div class="social_media_buttons">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
             </div>
-
-            <div class="social_media_buttons">
-
-                <a href="">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-
-                <a href="">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </div>
-
             <div id="banner">
-
-                <img src="./Imagens/hero.png" alt="hero">
-
-
+                <img src="./Imagens/hero.png" alt="Prato principal">
             </div>
-
-
         </section>
 
-    </main>
-
-    <div id="menu_pratos">
-
-        <h2 class="section-title">Cardápio</h2>
-
-        <h3 class="section-subtitle">Nossos pratos especiais</h3>
-
-        <div class="dishes">
-
-            <div class="dish">
-
-                <div class="dish-heart">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-                <!--Container caixa para o prato-->
-
-                <div class="caixa_fundo_prato">
-
-                    <img src="./Imagens/prato4.jpeg" alt="prato 4">
-
-                </div>
-                <!-------------------------------->
-
-                <h3 class="dish-title">Lorem ipsum</h3>
-
-                <p class="dish-description">Lorem ipsum, dolor si
-                    iquid.</p>
-
-                <div class="dish-rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <span>(500+)</span>
-
-                </div>
-
-                <div class="dish-price">
-                    <h4 class="preco_prato">R$20,00</h4>
-                    <button class="btn-default_shop">
-                        <i class="fa-solid fa-basket-shopping"></i>
-                    </button>
-                </div>
+        <section id="menu_pratos" class="container">
+            <div class="section-header">
+                <h2 class="section-title">Cardápio</h2>
+                <h3 class="section-subtitle">Nossos pratos especiais</h3>
             </div>
-
-            <div class="dish">
-
-                <div class="dish-heart">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-                <!--Container caixa para o prato-->
-
-                <div class="caixa_fundo_prato">
-
-                    <img src="./Imagens/prato5.jpeg" alt="prato 5">
-
-                </div>
-                <!-------------------------------->
-
-                <h3 class="dish-title">Lorem ipsum</h3>
-
-                <p class="dish-description">Lorem ipsum, dolor si
-                    iquid.</p>
-
-                <div class="dish-rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <span>(500+)</span>
-
-                </div>
-
-                <div class="dish-price">
-                    <h4 class="preco_prato">R$20,00</h4>
-                    <button class="btn-default_shop">
-                        <i class="fa-solid fa-basket-shopping"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="dish">
-
-                <div class="dish-heart">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-                <!--Container caixa para o prato-->
-
-                <div class="caixa_fundo_prato">
-
-                    <img src="./Imagens/prato6.jpeg" alt="prato 6">
-
-                </div>
-                <!-------------------------------->
-
-                <h3 class="dish-title">Lorem ipsum</h3>
-
-                <p class="dish-description">Lorem ipsum, dolor si
-                    iquid.</p>
-
-                <div class="dish-rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <span>(500+)</span>
-
-                </div>
-
-                <div class="dish-price">
-                    <h4 class="preco_prato">R$20,00</h4>
-                    <button class="btn-default_shop">
-                        <i class="fa-solid fa-basket-shopping"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="dish">
-
-                <div class="dish-heart">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-                <!--Container caixa para o prato-->
-
-                <div class="caixa_fundo_prato">
-
-                    <img src="./Imagens/prato7.jpeg" alt="prato 7">
-
-                </div>
-                <!-------------------------------->
-
-                <h3 class="dish-title">Lorem ipsum</h3>
-
-                <p class="dish-description">Lorem ipsum, dolor si
-                    iquid.</p>
-
-                <div class="dish-rate">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <span>(500+)</span>
-
-                </div>
-
-                <div class="dish-price">
-                    <h4 class="preco_prato">R$20,00</h4>
-                    <button class="btn-default_shop">
-                        <i class="fa-solid fa-basket-shopping"></i>
-                    </button>
-                </div>
-            </div>
-
-
-
+          <div class="dishes-grid">
+    <div class="dish-card">
+        <div class="dish-heart"><i class="fa-solid fa-heart"></i></div>
+        <div class="dish-image">
+            <img src="./Imagens/prato4.jpeg" alt="Salada Premium" onerror="this.src='https://images.unsplash.com/photo-1540420773420-3366772f4497?q=80&w=400&auto=format&fit=crop'">
         </div>
-
-
-
+        <div class="dish-info">
+            <h3 class="dish-title">Salada Premium</h3>
+            <p class="dish-description">Mix de folhas verdes com molho especial da casa e sementes selecionadas.</p>
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span>(500+)</span>
+            </div>
+            <div class="dish-footer">
+                <h4 class="preco_prato">R$ 20,00</h4>
+                <button class="btn-shop"><i class="fa-solid fa-basket-shopping"></i></button>
+            </div>
+        </div>
     </div>
 
-    <section id="testimonials">
-
-        
-        <img src="./Imagens/chef.png" id="testimonial_chef" alt="chefe">
-        <div class="testimonials_content">
-
-            <h2 class="section-title">
-                Depoimentos
-            </h2>
-
-            <h3 id="section-subtitle-testimonial">
-                O que os clientes falam sobre nós
-            </h3>
-
-            <div id="feedbacks">
-
-                <div class="feedback">
-                    <img src="./Imagens/avatar.png" class="avatar" alt="feedback-avatar">
-
-                    <div class="feedback-content">
-                        <p>
-                            Maria da Silva
-                            <span class="estrelas_user">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </span>
-                        </p>
-
-                        <p class="lorem_user">
-                            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo unde alias quaerat assumenda,
-                            eos endem!"
-                        </p>
-                    </div>
-
-                    
-                </div>
-
-                <div class="feedback">
-                    <img src="./Imagens/avatar.png"  class="avatar" alt="feedback-avatar">
-
-                    <div class="feedback-content">
-                        <p>
-                            Maria da Silva
-                            <span class="estrelas_user">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </span>
-                        </p>
-
-                        <p class="lorem_user">
-                            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo unde alias quaerat assumenda,
-                            eos endem!"
-                        </p>
-                    </div>
-
-                    
-                    
-                </div>
-                <button class="btn-default-testimonial">Ver mais Avaliações</button>
-    </section>
-
-
-    <footer>
-
-        <img src="./Imagens/waves_site_test.png" alt="onda site">
-
-        <div id="footer_items">
-
-            <span id="copyright">
-
-                &copy 2025 Ederson facanha
-            </span>
-
-            <div class="social_media_buttons">
-
-                <a href="">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-    
-                <a href="">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-    
-                <a href="">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
+    <div class="dish-card">
+        <div class="dish-heart"><i class="fa-solid fa-heart"></i></div>
+        <div class="dish-image">
+            <img src="./Imagens/prato1.jpeg" alt="Salmão Grelhado" onerror="this.src='https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=400&auto=format&fit=crop'">
+        </div>
+        <div class="dish-info">
+            <h3 class="dish-title">Salmão ao Alecrim</h3>
+            <p class="dish-description">Filé de salmão grelhado acompanhado de legumes no vapor e ervas finas.</p>
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                <span>(320+)</span>
+            </div>
+            <div class="dish-footer">
+                <h4 class="preco_prato">R$ 45,00</h4>
+                <button class="btn-shop"><i class="fa-solid fa-basket-shopping"></i></button>
             </div>
         </div>
-        
-     
+    </div>
+
+    <div class="dish-card">
+        <div class="dish-heart"><i class="fa-solid fa-heart"></i></div>
+        <div class="dish-image">
+            <img src="./Imagens/prato2.jpeg" alt="Bowl Vegano" onerror="this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=400&auto=format&fit=crop'">
+        </div>
+        <div class="dish-info">
+            <h3 class="dish-title">Bowl Vegano</h3>
+            <p class="dish-description">Quinoa, grão de bico, abacate e molho de tahine cremoso.</p>
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                <span>(180+)</span>
+            </div>
+            <div class="dish-footer">
+                <h4 class="preco_prato">R$ 28,00</h4>
+                <button class="btn-shop"><i class="fa-solid fa-basket-shopping"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dish-card">
+        <div class="dish-heart"><i class="fa-solid fa-heart"></i></div>
+        <div class="dish-image">
+            <img src="./Imagens/prato3.jpeg" alt="Frango Fit" onerror="this.src='https://images.unsplash.com/photo-1606854425890-b5249baf4b6d?q=80&w=400&auto=format&fit=crop'">
+        </div>
+        <div class="dish-info">
+            <h3 class="dish-title">Frango ao Curry</h3>
+            <p class="dish-description">Tiras de frango suculentas com arroz integral e toque de curry.</p>
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span>(450+)</span>
+            </div>
+            <div class="dish-footer">
+                <h4 class="preco_prato">R$ 32,00</h4>
+                <button class="btn-shop"><i class="fa-solid fa-basket-shopping"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dish-card">
+        <div class="dish-heart"><i class="fa-solid fa-heart"></i></div>
+        <div class="dish-image">
+            <img src="./Imagens/prato5.jpeg" alt="Espaguete Integral" onerror="this.src='https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=400&auto=format&fit=crop'">
+        </div>
+        <div class="dish-info">
+            <h3 class="dish-title">Massa Primavera</h3>
+            <p class="dish-description">Espaguete integral com tomates cereja, manjericão fresco e azeite.</p>
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                <span>(210+)</span>
+            </div>
+            <div class="dish-footer">
+                <h4 class="preco_prato">R$ 25,00</h4>
+                <button class="btn-shop"><i class="fa-solid fa-basket-shopping"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dish-card">
+        <div class="dish-heart"><i class="fa-solid fa-heart"></i></div>
+        <div class="dish-image">
+            <img src="./Imagens/prato6.jpeg" alt="Suco Detox" onerror="this.src='https://images.unsplash.com/photo-1610970881699-44a5587cabec?q=80&w=400&auto=format&fit=crop'">
+        </div>
+        <div class="dish-info">
+            <h3 class="dish-title">Suco Verde Sinergia</h3>
+            <p class="dish-description">Suco prensado a frio de couve, abacaxi, hortelã e gengibre.</p>
+            <div class="dish-rate">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <span>(600+)</span>
+            </div>
+            <div class="dish-footer">
+                <h4 class="preco_prato">R$ 12,00</h4>
+                <button class="btn-shop"><i class="fa-solid fa-basket-shopping"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+        </section>
+
+        <section id="testimonials" class="container">
+            <img src="./Imagens/chef.png" id="testimonial_chef" alt="Chef">
+            <div class="testimonials_content">
+                <h2 class="section-title">Depoimentos</h2>
+                <h3 class="section-subtitle">O que os clientes falam sobre nós</h3>
+                <div id="feedbacks">
+                    <div class="feedback-card">
+                        <img src="./Imagens/avatar.png" class="avatar" alt="Avatar">
+                        <div class="feedback-info">
+                            <strong>Maria da Silva</strong>
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>"A comida é simplesmente maravilhosa! O tempero é único."</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-default-testimonial">Ver mais Avaliações</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer_content" class="container">
+            <span id="copyright">&copy; 2026 Food Health - Ederson Façanha</span>
+            <div class="social_media_buttons">
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
     </footer>
 
+    <script>
+        const btnMobile = document.getElementById('mobile_btn_lateral');
+        const menuContainer = document.getElementById('mobile_menu_container');
+        const menuLinks = document.querySelectorAll('#mobile_nav_list a');
 
-    <script src="src/javascript/script.js"></script>
+        btnMobile.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuContainer.classList.toggle('active');
+            
+            const icon = btnMobile.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        });
 
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuContainer.classList.remove('active');
+                btnMobile.querySelector('i').classList.add('fa-bars');
+                btnMobile.querySelector('i').classList.remove('fa-xmark');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuContainer.contains(e.target) && !btnMobile.contains(e.target)) {
+                menuContainer.classList.remove('active');
+                btnMobile.querySelector('i').classList.add('fa-bars');
+                btnMobile.querySelector('i').classList.remove('fa-xmark');
+            }
+        });
+    </script>
 </body>
-
 </html>
